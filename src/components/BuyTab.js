@@ -6,6 +6,8 @@ const styles = {
     justifyContent: 'center',
     display: 'flex',
     flexDirection: 'column',
+    width: '40%',
+    margin: '0 auto'
   },
   percentageRow: {
     display: 'flex',
