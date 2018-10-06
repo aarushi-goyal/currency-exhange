@@ -5,15 +5,15 @@ import TabBar from '../components/TabBar';
 import BuyTab from '../components/BuyTab';
 
 class App extends Component {
-  tab = {
-    Buy: 'buy',
-    Sell: 'sell'
-  }
+  // tab = {
+  //   Buy: 'buy',
+  //   Sell: 'sell'
+  // }
   render() {
     return (
       <div className="App">
         <CurrencyTable tableData={data.accountPositions} />
-        <TabBar activeTabs=""/>
+        <TabBar activeTabs="buy"/>
         <BuyTab />
       </div>
     );
