@@ -25,6 +25,7 @@ const styles = {
   inputField: {
     justifyContent: 'space-around',
     display: 'flex',
+    padding: '5px 5px'
   },
   paddingAround: {
     paddingTop: '10px',
