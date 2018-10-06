@@ -26,6 +26,11 @@ const styles = {
     justifyContent: 'space-around',
     display: 'flex',
   },
+  paddingAround: {
+    paddingTop: '10px',
+    paddingBottom: '10px',
+    textAlign: 'center'
+  }
 };
 
 class BuyTab extends Component {
@@ -38,12 +43,21 @@ class BuyTab extends Component {
     };
 
     this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleOnChange(field, value) {
     this.setState({
       [field]: parseFloat(value)
     });
+  }
+  handleClick() {
+    console.log('clicked')
+    this.setState({
+      amount: 0,
+      pricePerUnit: 0
+    })
+
   }
 
   render() {
@@ -70,6 +84,13 @@ class BuyTab extends Component {
           <div style={styles.inputField}>
             <label htmlFor="total">Order Total:</label>
             <div>{this.state.amount * this.state.pricePerUnit}</div>
+          </div>
+          <div style={styles.paddingAround}>
+            -Min Order Amount: 1000 KRW -Fees Maker: 0% Taker: 0.015%
+          </div>
+          <div style={{display: 'flex'}}>
+            <button style={{flex: 1, height: '30px'}} onClick={this.handleClick}>Reset</button>
+            <button  style={{flex: 3, backgroundColor: 'red', height: '30px'}}> Buy </button>
           </div>
         </div>
       </div>

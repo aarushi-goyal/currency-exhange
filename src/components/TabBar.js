@@ -4,7 +4,9 @@ const style = {
   flexDisplay: {
     flex: 1,
     backgroundColor: 'lightgrey',
-    textAlign: 'center'
+    textAlign: 'center',
+    height: '30px',
+    paddingTop: '6px'
   },
   container: {
     padding: 10,
