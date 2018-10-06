@@ -28,19 +28,7 @@ class TabBar extends Component {
     }
   }
 
-  componentDidMount() {
-
-  }
-
-  handleClick(activeTab, currentTab) {
-    if (activeTab == currentTab) {
-      this.setState({ color: 'red' })
-    }
-    
-  }
-
   render() {
-    const { activeTabs } = this.props;
     return(
     <div style={style.container}>
       <div style={{...style.flexDisplay, backgroundColor: 'red'}}>
